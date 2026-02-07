@@ -3,3 +3,4 @@ pydantic-ai
 python-dotenv
 sendgrid
 streamlit
+openai
