@@ -1,7 +1,7 @@
 # Updated tools.py for Resend
 import os
 import resend
-from openai import function_tool
+from agents import function_tool
 
 resend.api_key = os.environ.get("RESEND_API_KEY")
 

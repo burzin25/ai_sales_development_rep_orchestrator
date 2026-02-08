@@ -1,6 +1,6 @@
 import streamlit as st
 import asyncio
-from openai import Runner, trace
+from agents import Runner, trace
 from src.agents import sales_manager
 from dotenv import load_dotenv
 

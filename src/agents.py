@@ -1,4 +1,4 @@
-from openai import Agent
+from agents import Agent
 from .tools import send_email
 
 # Specialist 1: The Corporate Professional
@@ -29,9 +29,18 @@ sales_manager = Agent(
     instructions="Review the user's lead info. Use your sub-agents to generate 3 options. "
     "Then, pick the best one and present it for approval.",
     tools=[
-        prof_agent.as_tool(tool_name="get_professional_draft"),
-        creative_agent.as_tool(tool_name="get_creative_draft"),
-        busy_agent.as_tool(tool_name="get_concise_draft"),
+        prof_agent.as_tool(
+            tool_name="get_professional_draft",
+            tool_description="Generate a formal, data-driven sales email",
+        ),
+        creative_agent.as_tool(
+            tool_name="get_creative_draft",
+            tool_description="Generate a witty, engaging sales email",
+        ),
+        busy_agent.as_tool(
+            tool_name="get_concise_draft",
+            tool_description="Generate a short, 3-sentence sales email",
+        ),
         send_email,
     ],
     model="gpt-4o",
