@@ -4,4 +4,5 @@ python-dotenv
 sendgrid
 streamlit
 openai
-\n# updated 2026-02-08 by script
+resend
+resend
