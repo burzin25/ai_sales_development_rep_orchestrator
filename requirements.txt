@@ -1,7 +1,6 @@
 openai-agents
 pydantic-ai
 python-dotenv
-sendgrid
 streamlit
 openai
 resend
